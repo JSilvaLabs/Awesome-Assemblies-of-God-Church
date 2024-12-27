@@ -24,7 +24,7 @@ This Awesome List is a collaborative effort to highlight exceptional Assemblies 
 
 [YouTube Channels](#youtube-channels)
 
-[Bible Studies](#Bible-Studies)
+[Bible Studies](#bible-studies)
 
 ## Other important information:
 [Doctrines](#doctrines)
