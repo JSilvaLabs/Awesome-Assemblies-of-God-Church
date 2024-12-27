@@ -24,6 +24,7 @@ This Awesome List is a collaborative effort to highlight exceptional Assemblies 
 
 [YouTube Channels](#youtube-channels)
 
+[Bible Studies](#Bible-Studies)
 
 ## Other important information:
 [Doctrines](#doctrines)
@@ -480,7 +481,10 @@ This Awesome List is a collaborative effort to highlight exceptional Assemblies 
 10. [My Healthy Church](https://www.youtube.com/@MyHealthyChurch)
 9. [Network of Women Ministers](https://www.youtube.com/c/networkofwomenministers)
 10. [Proyecto Compromiso Bíblico](https://www.youtube.com/c/ProyectoCompromisoB%C3%ADblico)
- 
+
+## Bible Studies
+1. [NCN Bible Studies](https://agncn.org/bible-studies-curriculum)
+
 ## Doctrines
 1. Assemblies of God
    - Doctrines
