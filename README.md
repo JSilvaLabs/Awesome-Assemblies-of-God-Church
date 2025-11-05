@@ -33,6 +33,8 @@ This Awesome List is a collaborative effort to highlight exceptional Assemblies 
 
 [Frameworks](#frameworks)
 
+[Ministerial Resources](#Ministerial-Resources)
+
 ## Blogs
 1. [The Instititue of Ministerial Wholeness](https://www.imwholeness.org/blog)
 
@@ -782,3 +784,7 @@ This Awesome List is a collaborative effort to highlight exceptional Assemblies 
       - Authenticity
       - Forgiveness
       - Hope
+
+## Ministerial-Resources
+1. [Ministerial Portfolio Template](https://docs.google.com/document/d/1-2EYcx2ZdXmQnqvznVjLLIfT5d4Vb4O8hq7nVEsuOvw/edit?usp=sharing)
+   - 
