@@ -486,6 +486,7 @@ This Awesome List is a collaborative effort to highlight exceptional Assemblies 
 
 ## Bible Studies
 1. [NCN Bible Studies](https://agncn.org/bible-studies-curriculum)
+2. [TrustBible](https://trustbible.org/) - A free Bible Q&A tool that cites the exact verses behind every answer.
 
 ## Doctrines
 1. Assemblies of God
