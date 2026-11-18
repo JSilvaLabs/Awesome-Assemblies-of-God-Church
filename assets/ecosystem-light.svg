@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 326" width="100%" role="img" aria-label="Assemblies of God Global and U.S. Ministry Ecosystem">
+  <defs>
+    <clipPath id="ecoTopA_light"><rect x="160" y="22" width="410" height="68" rx="12"/></clipPath>
+    <clipPath id="ecoTopB_light"><rect x="630" y="22" width="410" height="68" rx="12"/></clipPath>
+    <clipPath id="ecoBot_light"><rect x="210" y="260" width="780" height="44" rx="10"/></clipPath>
+    <clipPath id="ecoPillar_light_0"><rect x="28" y="132" width="216" height="96" rx="12"/></clipPath>
+    <clipPath id="ecoPillar_light_1"><rect x="260" y="132" width="216" height="96" rx="12"/></clipPath>
+    <clipPath id="ecoPillar_light_2"><rect x="492" y="132" width="216" height="96" rx="12"/></clipPath>
+    <clipPath id="ecoPillar_light_3"><rect x="724" y="132" width="216" height="96" rx="12"/></clipPath>
+    <clipPath id="ecoPillar_light_4"><rect x="956" y="132" width="216" height="96" rx="12"/></clipPath>
+  </defs>
+  <rect x="12" y="6" width="1176" height="314" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+
+  <!-- Row 1: WAGF -> AG USA -->
+  <g clip-path="url(#ecoTopA_light)">
+    <rect x="160" y="22" width="410" height="68" rx="12" fill="#FFFFFF"/>
+    <rect x="160" y="22" width="410" height="4" fill="#F59E0B"/>
+    <text x="365" y="51" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0F172A">World Assemblies of God Fellowship (WAGF)</text>
+    <text x="365" y="73" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#F59E0B">Global Pentecostal Fellowship · 85M+ Adherents</text>
+  </g>
+  <rect x="160.5" y="22.5" width="409" height="67" rx="12" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+
+  <line x1="570" y1="56" x2="623" y2="56" stroke="#F59E0B" stroke-width="2"/>
+  <polygon points="630,56 621,51 621,61" fill="#F59E0B"/>
+
+  <g clip-path="url(#ecoTopB_light)">
+    <rect x="630" y="22" width="410" height="68" rx="12" fill="#FFFFFF"/>
+    <rect x="630" y="22" width="410" height="4" fill="#F59E0B"/>
+    <text x="835" y="51" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#0F172A">Assemblies of God USA (General Council)</text>
+    <text x="835" y="73" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#F59E0B">Springfield, MO · District &amp; Ethnic Networks</text>
+  </g>
+  <rect x="630.5" y="22.5" width="409" height="67" rx="12" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+
+  <!-- Top-to-Middle Bus & Collector Lines -->
+  <line x1="835" y1="90" x2="835" y2="110" stroke="#0EA5E9" stroke-width="1.8"/>
+  <line x1="136" y1="110" x2="1064" y2="110" stroke="#0EA5E9" stroke-width="1.8"/>
+  <line x1="136" y1="110" x2="136" y2="126" stroke="#0EA5E9" stroke-width="1.8"/>
+  <polygon points="136,132 131.5,124 140.5,124" fill="#0EA5E9"/>
+  <line x1="136" y1="228" x2="136" y2="244" stroke="#10B981" stroke-width="1.6"/>
+  <line x1="368" y1="110" x2="368" y2="126" stroke="#0EA5E9" stroke-width="1.8"/>
+  <polygon points="368,132 363.5,124 372.5,124" fill="#0EA5E9"/>
+  <line x1="368" y1="228" x2="368" y2="244" stroke="#10B981" stroke-width="1.6"/>
+  <line x1="600" y1="110" x2="600" y2="126" stroke="#0EA5E9" stroke-width="1.8"/>
+  <polygon points="600,132 595.5,124 604.5,124" fill="#0EA5E9"/>
+  <line x1="600" y1="228" x2="600" y2="244" stroke="#10B981" stroke-width="1.6"/>
+  <line x1="832" y1="110" x2="832" y2="126" stroke="#0EA5E9" stroke-width="1.8"/>
+  <polygon points="832,132 827.5,124 836.5,124" fill="#0EA5E9"/>
+  <line x1="832" y1="228" x2="832" y2="244" stroke="#10B981" stroke-width="1.6"/>
+  <line x1="1064" y1="110" x2="1064" y2="126" stroke="#0EA5E9" stroke-width="1.8"/>
+  <polygon points="1064,132 1059.5,124 1068.5,124" fill="#0EA5E9"/>
+  <line x1="1064" y1="228" x2="1064" y2="244" stroke="#10B981" stroke-width="1.6"/>
+
+  <line x1="136" y1="244" x2="1064" y2="244" stroke="#10B981" stroke-width="1.6"/>
+  <line x1="600" y1="244" x2="600" y2="254" stroke="#10B981" stroke-width="2"/>
+  <polygon points="600,260 595,252 605,252" fill="#10B981"/>
+
+  <!-- Row 2: Five Ministry & Academic Pillars -->
+  <g clip-path="url(#ecoPillar_light_0)">
+    <rect x="28" y="132" width="216" height="96" rx="12" fill="#FFFFFF"/>
+    <rect x="28" y="132" width="216" height="4" fill="#EF4444"/>
+    <text x="136" y="164" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F172A">World Missions</text>
+    <text x="136" y="188" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#EF4444">AGWM · Convoy of Hope</text>
+    <text x="136" y="210" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" fill="#475569">Global Relief &amp; Planting</text>
+  </g>
+  <rect x="28.5" y="132.5" width="215" height="95" rx="12" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+  <g clip-path="url(#ecoPillar_light_1)">
+    <rect x="260" y="132" width="216" height="96" rx="12" fill="#FFFFFF"/>
+    <rect x="260" y="132" width="216" height="4" fill="#0EA5E9"/>
+    <text x="368" y="164" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F172A">U.S. Missions</text>
+    <text x="368" y="188" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#0EA5E9">Chi Alpha · Teen Challenge</text>
+    <text x="368" y="210" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" fill="#475569">Chaplaincy · Youth Alive</text>
+  </g>
+  <rect x="260.5" y="132.5" width="215" height="95" rx="12" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+  <g clip-path="url(#ecoPillar_light_2)">
+    <rect x="492" y="132" width="216" height="96" rx="12" fill="#FFFFFF"/>
+    <rect x="492" y="132" width="216" height="4" fill="#8B5CF6"/>
+    <text x="600" y="164" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Higher Education</text>
+    <text x="600" y="188" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#8B5CF6">20+ Accredited Colleges</text>
+    <text x="600" y="210" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" fill="#475569">AGTS &amp; Global University</text>
+  </g>
+  <rect x="492.5" y="132.5" width="215" height="95" rx="12" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+  <g clip-path="url(#ecoPillar_light_3)">
+    <rect x="724" y="132" width="216" height="96" rx="12" fill="#FFFFFF"/>
+    <rect x="724" y="132" width="216" height="4" fill="#10B981"/>
+    <text x="832" y="164" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F172A">NextGen &amp; Church</text>
+    <text x="832" y="188" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#10B981">Royal Rangers · Girls Min.</text>
+    <text x="832" y="210" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" fill="#475569">BGMC · Speed the Light</text>
+  </g>
+  <rect x="724.5" y="132.5" width="215" height="95" rx="12" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+  <g clip-path="url(#ecoPillar_light_4)">
+    <rect x="956" y="132" width="216" height="96" rx="12" fill="#FFFFFF"/>
+    <rect x="956" y="132" width="216" height="4" fill="#F59E0B"/>
+    <text x="1064" y="164" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0F172A">Heritage &amp; Doctrine</text>
+    <text x="1064" y="188" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.2" font-weight="600" fill="#F59E0B">Flower Heritage Center</text>
+    <text x="1064" y="210" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" fill="#475569">16 Truths &amp; Journals</text>
+  </g>
+  <rect x="956.5" y="132.5" width="215" height="95" rx="12" fill="none" stroke="#CBD5E1" stroke-width="1"/>
+
+  <!-- Row 3: Local Churches & District Networks -->
+  <g clip-path="url(#ecoBot_light)">
+    <rect x="210" y="260" width="780" height="44" rx="10" fill="#FFFFFF"/>
+    <rect x="210" y="260" width="780" height="3.5" fill="#10B981"/>
+    <text x="600" y="287" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#1E293B">Local Churches &amp; District Networks Worldwide — Evangelize · Worship · Disciple · Show Compassion</text>
+  </g>
+  <rect x="210.5" y="260.5" width="779" height="43" rx="10" fill="none" stroke="#10B981" stroke-width="1"/>
+</svg>

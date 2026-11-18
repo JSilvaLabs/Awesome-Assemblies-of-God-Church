@@ -56,21 +56,13 @@
 
 <br/>
 
-```mermaid
-flowchart TB
-    classDef top fill:#0B1120,stroke:#F59E0B,stroke-width:2px,color:#F8FAFC
-    classDef mid fill:#0F172A,stroke:#0EA5E9,stroke-width:2px,color:#F8FAFC
-    classDef sub fill:#0F172A,stroke:#10B981,stroke-width:1.5px,color:#E2E8F0
-
-    WAGF["World Assemblies of God Fellowship (WAGF)"]:::top --> AGUSA["Assemblies of God USA General Council"]:::top
-    AGUSA --> WM["World Missions<br/>AGWM · Convoy of Hope"]:::mid
-    AGUSA --> USM["US Missions<br/>Chi Alpha · Teen Challenge · Chaplaincy · Youth Alive"]:::mid
-    AGUSA --> EDU["Higher Education<br/>20+ Accredited Colleges & AGTS Seminary"]:::mid
-    AGUSA --> MIN["NextGen & Local Church<br/>Royal Rangers · Girls · BGMC · Speed the Light · NWM"]:::mid
-    AGUSA --> ARCH["Archives & Scholarship<br/>IFPHC Heritage Center · Position Papers · Journals"]:::mid
-    USM --> LOCAL["District Networks & Local Churches Worldwide"]:::sub
-    MIN --> LOCAL
-```
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/ecosystem-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/ecosystem-light.svg" />
+  <img alt="Assemblies of God Global and U.S. Ministry Ecosystem" src="./assets/ecosystem-dark.svg" width="100%" />
+</picture>
+</div>
 
 ---
 
