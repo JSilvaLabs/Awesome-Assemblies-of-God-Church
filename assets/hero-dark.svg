@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 296" width="100%" role="img" aria-label="Awesome Assemblies of God Directory Banner">
+  <defs>
+    <clipPath id="agHeroClip_dark">
+      <rect x="0" y="0" width="1200" height="296" rx="18"/>
+    </clipPath>
+    <pattern id="agGrid_dark" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="1" opacity="0.38"/>
+    </pattern>
+    <linearGradient id="fourfoldBar_dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="33%" stop-color="#F59E0B"/>
+      <stop offset="66%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="agGlow_dark" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#0EA5E9" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      @keyframes pulseRing {
+        0%   { r: 4.5; opacity: 0.9; }
+        70%  { r: 10; opacity: 0; }
+        100% { r: 10; opacity: 0; }
+      }
+      @keyframes orbitSpin {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes dataFlow {
+        0%   { stroke-dashoffset: 36; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .pulse-ring { animation: pulseRing 2.4s cubic-bezier(0.2, 0.8, 0.2, 1) infinite; }
+      .orbit-ring { transform-origin: 1020px 148px; animation: orbitSpin 44s linear infinite; }
+      .flow-line  { stroke-dasharray: 5 4; animation: dataFlow 2.2s linear infinite; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#agHeroClip_dark)">
+    <rect x="0" y="0" width="1200" height="296" fill="#0B1120"/>
+    <rect x="0" y="0" width="1200" height="296" fill="url(#agGrid_dark)"/>
+    <circle cx="1020" cy="148" r="210" fill="url(#agGlow_dark)"/>
+    <rect x="0" y="0" width="1200" height="5" fill="url(#fourfoldBar_dark)"/>
+
+    <rect x="48" y="26" width="690" height="28" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="66" cy="40" r="4.5" fill="#F59E0B" class="pulse-ring"/>
+    <circle cx="66" cy="40" r="4.5" fill="#F59E0B"/>
+    <text x="80" y="44" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="11.5" font-weight="600" letter-spacing="1" fill="#FBBF24">CURATED OPEN-SOURCE DIRECTORY  //  CHURCHES · DOCTRINE · HIGHER ED · MISSIONS</text>
+
+    <text x="48" y="98" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="40" font-weight="800" letter-spacing="-0.5" fill="#F8FAFC">AWESOME ASSEMBLIES OF GOD</text>
+    <text x="48" y="132" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="600" fill="#CBD5E1">Churches, Accredited Universities, 16 Fundamental Truths, Missions &amp; Ministry Frameworks</text>
+    <text x="48" y="158" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#94A3B8">Community-maintained resource hub + live searchable GitHub Pages directory (not an official AG publication)</text>
+
+  <rect x="48" y="198" width="208" height="30" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <circle cx="60" cy="213" r="3.5" fill="#EF4444"/>
+  <text x="70" y="217" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#E2E8F0">350+ Curated Resources</text>
+  <rect x="266" y="198" width="200" height="30" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <circle cx="278" cy="213" r="3.5" fill="#F59E0B"/>
+  <text x="288" y="217" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#E2E8F0">16 Fundamental Truths</text>
+  <rect x="476" y="198" width="236" height="30" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <circle cx="488" cy="213" r="3.5" fill="#0EA5E9"/>
+  <text x="498" y="217" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#E2E8F0">20+ Colleges &amp; Seminaries</text>
+  <rect x="48" y="238" width="248" height="30" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <circle cx="60" cy="253" r="3.5" fill="#8B5CF6"/>
+  <text x="70" y="257" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#E2E8F0">30+ Official Position Papers</text>
+  <rect x="306" y="238" width="212" height="30" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <circle cx="318" cy="253" r="3.5" fill="#10B981"/>
+  <text x="328" y="257" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#E2E8F0">7 Ministry Frameworks</text>
+  <rect x="528" y="238" width="184" height="30" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <circle cx="540" cy="253" r="3.5" fill="#14B8A6"/>
+  <text x="550" y="257" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#E2E8F0">Live Search Web App</text>
+
+
+    <!-- Right-Side Fourfold Gospel Emblem -->
+    <circle cx="1020" cy="148" r="96" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 6" class="orbit-ring"/>
+    <circle cx="1020" cy="148" r="70" fill="none" stroke="#334155" stroke-width="1" opacity="0.6"/>
+
+    <line x1="1020" y1="54" x2="1020" y2="108" stroke="#EF4444" stroke-width="1.8" class="flow-line"/>
+    <line x1="1060" y1="148" x2="1116" y2="148" stroke="#0EA5E9" stroke-width="1.8" class="flow-line"/>
+    <line x1="1020" y1="188" x2="1020" y2="242" stroke="#8B5CF6" stroke-width="1.8" class="flow-line"/>
+    <line x1="924" y1="148" x2="980" y2="148" stroke="#F59E0B" stroke-width="1.8" class="flow-line"/>
+
+    <circle cx="1020" cy="148" r="40" fill="#0F172A" stroke="#F59E0B" stroke-width="2.2"/>
+    <circle cx="1020" cy="148" r="34" fill="none" stroke="#0EA5E9" stroke-width="0.9" opacity="0.6"/>
+    <text x="1020" y="151" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="1" fill="#F8FAFC">AG</text>
+    <text x="1020" y="168" text-anchor="middle" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="9" font-weight="700" letter-spacing="1.4" fill="#F59E0B">AWESOME</text>
+
+    <rect x="966" y="30" width="108" height="24" rx="12" fill="#0F172A" stroke="#EF4444" stroke-width="1.4"/>
+    <text x="1020" y="46" text-anchor="middle" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#F8FAFC">SALVATION</text>
+
+    <rect x="1084" y="136" width="96" height="24" rx="12" fill="#0F172A" stroke="#0EA5E9" stroke-width="1.4"/>
+    <text x="1132" y="152" text-anchor="middle" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#F8FAFC">HEALING</text>
+
+    <rect x="962" y="242" width="116" height="24" rx="12" fill="#0F172A" stroke="#8B5CF6" stroke-width="1.4"/>
+    <text x="1020" y="258" text-anchor="middle" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#F8FAFC">2ND COMING</text>
+
+    <rect x="844" y="136" width="116" height="24" rx="12" fill="#0F172A" stroke="#F59E0B" stroke-width="1.4"/>
+    <text x="902" y="152" text-anchor="middle" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="10.5" font-weight="700" fill="#F8FAFC">HOLY SPIRIT</text>
+  </g>
+
+  <rect x="0.75" y="0.75" width="1198.5" height="294.5" rx="18" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+</svg>

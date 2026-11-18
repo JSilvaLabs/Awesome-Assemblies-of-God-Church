@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 152" width="100%" role="img" aria-label="Fourfold Gospel of the Assemblies of God">
+  <defs>
+    <clipPath id="ffClip_dark_0"><rect x="12" y="10" width="285" height="132" rx="12"/></clipPath>
+    <clipPath id="ffClip_dark_1"><rect x="309" y="10" width="285" height="132" rx="12"/></clipPath>
+    <clipPath id="ffClip_dark_2"><rect x="606" y="10" width="285" height="132" rx="12"/></clipPath>
+    <clipPath id="ffClip_dark_3"><rect x="903" y="10" width="285" height="132" rx="12"/></clipPath>
+  </defs>
+  <g clip-path="url(#ffClip_dark_0)">
+    <rect x="12" y="10" width="285" height="132" rx="12" fill="#0F172A"/>
+    <rect x="12" y="10" width="285" height="4" fill="#EF4444"/>
+    <rect x="30" y="28" width="120" height="20" rx="6" fill="#1E293B"/>
+    <text x="90" y="41.5" text-anchor="middle" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="9.5" font-weight="700" letter-spacing="0.6" fill="#EF4444">01 // SALVATION</text>
+    <text x="30" y="78" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#F8FAFC">Jesus Saves</text>
+    <text x="30" y="102" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="11.5" font-weight="600" fill="#EF4444">Luke 19:10 · Rom 10:9–10</text>
+    <text x="30" y="124" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#94A3B8">Grace through faith in Christ</text>
+  </g>
+  <rect x="12.5" y="10.5" width="284" height="131" rx="12" fill="none" stroke="#1E293B" stroke-width="1"/>
+  <g clip-path="url(#ffClip_dark_1)">
+    <rect x="309" y="10" width="285" height="132" rx="12" fill="#0F172A"/>
+    <rect x="309" y="10" width="285" height="4" fill="#F59E0B"/>
+    <rect x="327" y="28" width="134" height="20" rx="6" fill="#1E293B"/>
+    <text x="394" y="41.5" text-anchor="middle" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="9.5" font-weight="700" letter-spacing="0.6" fill="#F59E0B">02 // HOLY SPIRIT</text>
+    <text x="327" y="78" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#F8FAFC">Jesus Baptizes</text>
+    <text x="327" y="102" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="11.5" font-weight="600" fill="#F59E0B">Acts 1:8 · Acts 2:4</text>
+    <text x="327" y="124" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#94A3B8">Promise &amp; power for witness</text>
+  </g>
+  <rect x="309.5" y="10.5" width="284" height="131" rx="12" fill="none" stroke="#1E293B" stroke-width="1"/>
+  <g clip-path="url(#ffClip_dark_2)">
+    <rect x="606" y="10" width="285" height="132" rx="12" fill="#0F172A"/>
+    <rect x="606" y="10" width="285" height="4" fill="#0EA5E9"/>
+    <rect x="624" y="28" width="106" height="20" rx="6" fill="#1E293B"/>
+    <text x="677" y="41.5" text-anchor="middle" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="9.5" font-weight="700" letter-spacing="0.6" fill="#0EA5E9">03 // HEALING</text>
+    <text x="624" y="78" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#F8FAFC">Jesus Heals</text>
+    <text x="624" y="102" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="11.5" font-weight="600" fill="#0EA5E9">Isa 53:4–5 · Jas 5:14–16</text>
+    <text x="624" y="124" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#94A3B8">Provision in the Atonement</text>
+  </g>
+  <rect x="606.5" y="10.5" width="284" height="131" rx="12" fill="none" stroke="#1E293B" stroke-width="1"/>
+  <g clip-path="url(#ffClip_dark_3)">
+    <rect x="903" y="10" width="285" height="132" rx="12" fill="#0F172A"/>
+    <rect x="903" y="10" width="285" height="4" fill="#8B5CF6"/>
+    <rect x="921" y="28" width="147" height="20" rx="6" fill="#1E293B"/>
+    <text x="994.5" y="41.5" text-anchor="middle" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="9.5" font-weight="700" letter-spacing="0.6" fill="#8B5CF6">04 // SECOND COMING</text>
+    <text x="921" y="78" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#F8FAFC">Jesus Returns</text>
+    <text x="921" y="102" font-family="'Cascadia Code', 'JetBrains Mono', Consolas, ui-monospace, monospace" font-size="11.5" font-weight="600" fill="#8B5CF6">1 Thess 4:16–17 · Titus 2:13</text>
+    <text x="921" y="124" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" fill="#94A3B8">The Blessed Hope of the Church</text>
+  </g>
+  <rect x="903.5" y="10.5" width="284" height="131" rx="12" fill="none" stroke="#1E293B" stroke-width="1"/>
+</svg>

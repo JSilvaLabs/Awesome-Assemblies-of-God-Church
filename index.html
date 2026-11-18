@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awesome Assemblies of God — Interactive Directory & Resource Explorer</title>
+  <meta name="description" content="Searchable open-source directory of Assemblies of God churches, accredited universities, 16 Fundamental Truths, official position papers, missions, and ministry frameworks." />
+  <style>
+    :root {
+      --bg: #0b1120;
+      --surface: #0f172a;
+      --surface-alt: #1e293b;
+      --border: #1e293b;
+      --border-strong: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #f59e0b;
+      --blue: #0ea5e9;
+      --green: #10b981;
+      --red: #ef4444;
+      --purple: #8b5cf6;
+    }
+    html[data-theme="light"] {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-alt: #f1f5f9;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --text: #0f172a;
+      --muted: #475569;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      transition: background .2s ease, color .2s ease;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1220px; margin: 0 auto; padding: 24px 20px 64px; }
+    .topbar {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 12px; flex-wrap: wrap; margin-bottom: 18px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: -.01em; font-size: 1.05rem; }
+    .brand-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--red), var(--accent), var(--blue), var(--purple));
+      display: inline-block;
+    }
+    .nav-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 14px; border-radius: 10px; font-size: .875rem; font-weight: 600;
+      border: 1px solid var(--border-strong); background: var(--surface); color: var(--text);
+      cursor: pointer; transition: transform .12s ease, border-color .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); border-color: var(--blue); text-decoration: none; }
+    .hero-img { width: 100%; border-radius: 18px; display: block; margin-bottom: 16px; }
+    .grid-4 {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px; margin: 18px 0 28px;
+    }
+    .pillar {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 16px 18px; border-top-width: 4px;
+    }
+    .pillar-tag { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: .9; }
+    .pillar h3 { margin: 6px 0 4px; font-size: 1.15rem; }
+    .pillar p { margin: 0; font-size: .84rem; color: var(--muted); }
+    .controls {
+      position: sticky; top: 10px; z-index: 20;
+      background: var(--surface); border: 1px solid var(--border-strong);
+      border-radius: 14px; padding: 14px; margin-bottom: 22px;
+      box-shadow: 0 12px 28px rgba(0,0,0,.18);
+    }
+    .search-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; align-items: center; }
+    .search-input {
+      flex: 1 1 280px; padding: 11px 14px; border-radius: 10px;
+      border: 1px solid var(--border-strong); background: var(--bg); color: var(--text);
+      font-size: .95rem; outline: none;
+    }
+    .search-input:focus { border-color: var(--blue); }
+    .count-badge {
+      font-size: .82rem; font-weight: 700; color: var(--muted);
+      padding: 8px 12px; border-radius: 8px; background: var(--surface-alt);
+    }
+    .tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .tab {
+      padding: 6px 12px; border-radius: 999px; font-size: .82rem; font-weight: 600;
+      border: 1px solid var(--border-strong); background: var(--surface-alt); color: var(--muted);
+      cursor: pointer;
+    }
+    .tab.active { background: var(--blue); color: #ffffff; border-color: var(--blue); }
+    .cards {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 14px; margin-bottom: 40px;
+    }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between;
+      transition: border-color .15s ease, transform .12s ease;
+    }
+    .card:hover { border-color: var(--blue); transform: translateY(-2px); }
+    .card-cat {
+      display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; padding: 3px 9px; border-radius: 6px;
+      background: var(--surface-alt); color: var(--accent); margin-bottom: 8px;
+    }
+    .card h4 { margin: 0 0 6px; font-size: 1.02rem; }
+    .card p { margin: 0 0 12px; font-size: .86rem; color: var(--muted); }
+    .card-footer { display: flex; justify-content: space-between; align-items: center; font-size: .82rem; font-weight: 600; }
+    .loc { color: var(--muted); font-weight: 500; }
+    .section-title { margin: 32px 0 12px; font-size: 1.35rem; font-weight: 800; }
+    .truths {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 10px;
+    }
+    details.truth {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px;
+    }
+    details.truth summary { cursor: pointer; font-weight: 700; font-size: .92rem; }
+    details.truth p { margin: 8px 0 0; font-size: .84rem; color: var(--muted); }
+    footer {
+      margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border);
+      font-size: .84rem; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span>Awesome Assemblies of God</span>
+      </div>
+      <div class="nav-actions">
+        <button id="themeToggle" class="btn" type="button">Light / Dark</button>
+        <a class="btn" href="https://ag.org/Resources/Directories/Find-a-Church" target="_blank" rel="noopener">Find an AG Church</a>
+        <a class="btn" href="https://github.com/JSilvaLabs/Awesome-Assemblies-of-God-Church" target="_blank" rel="noopener">GitHub Repo</a>
+      </div>
+    </header>
+
+    <img id="heroImg" class="hero-img" src="./assets/hero-dark.svg" alt="Awesome Assemblies of God Directory Banner" />
+
+    <section class="grid-4" aria-label="Fourfold Gospel">
+      <div class="pillar" style="border-top-color: var(--red)">
+        <div class="pillar-tag" style="color: var(--red)">01 // Salvation</div>
+        <h3>Jesus Saves</h3>
+        <p>Luke 19:10 · Rom 10:9–10 · Redemption through grace by faith</p>
+      </div>
+      <div class="pillar" style="border-top-color: var(--accent)">
+        <div class="pillar-tag" style="color: var(--accent)">02 // Holy Spirit</div>
+        <h3>Jesus Baptizes</h3>
+        <p>Acts 1:8 · Acts 2:4 · Spiritual empowerment for Christian witness</p>
+      </div>
+      <div class="pillar" style="border-top-color: var(--blue)">
+        <div class="pillar-tag" style="color: var(--blue)">03 // Healing</div>
+        <h3>Jesus Heals</h3>
+        <p>Isa 53:4–5 · Jas 5:14–16 · Divine healing provided in the Atonement</p>
+      </div>
+      <div class="pillar" style="border-top-color: var(--purple)">
+        <div class="pillar-tag" style="color: var(--purple)">04 // Second Coming</div>
+        <h3>Jesus Returns</h3>
+        <p>1 Thess 4:16–17 · Titus 2:13 · The Blessed Hope of the Church</p>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="Search and Filter Resources">
+      <div class="search-row">
+        <input id="searchBox" class="search-input" type="search" placeholder="Search churches, universities, position papers, ministries, podcasts, Texas, Missouri, Florida..." />
+        <span id="resultCount" class="count-badge">Loading...</span>
+      </div>
+      <div id="categoryTabs" class="tabs"></div>
+    </section>
+
+    <main>
+      <div id="cardsContainer" class="cards"></div>
+
+      <h2 class="section-title">16 Fundamental Truths Explorer</h2>
+      <div id="truthsContainer" class="truths"></div>
+    </main>
+
+    <footer>
+      <span>Community open-source directory (CC0-1.0) · Not an official publication of the Assemblies of God</span>
+      <span>Maintained by <a href="https://github.com/JSilvaLabs">JSilvaLabs</a> · <a href="https://github.com/JSilvaLabs/Awesome-Assemblies-of-God-Church/blob/main/contributing.md">Contribute a Resource</a></span>
+    </footer>
+  </div>
+
+  <script>
+    const RESOURCES = [
+      // Churches
+      { cat: "Churches", title: "Bayside Community Church", loc: "Bradenton, FL", desc: "Multi-campus Gulf Coast AG church with active small groups & family ministries.", url: "https://mybayside.church" },
+      { cat: "Churches", title: "Calvary Christian Church", loc: "Lynnfield, MA", desc: "Multi-generational AG congregation serving Boston's North Shore families.", url: "https://www.calvarychristian.church" },
+      { cat: "Churches", title: "Dream City Church", loc: "Phoenix, AZ", desc: "Multi-campus congregation known for Dream Center compassion ministry.", url: "https://dreamcitychurch.us" },
+      { cat: "Churches", title: "Faith Assembly", loc: "Orlando, FL", desc: "Large Central Florida AG congregation with bilingual & global outreach.", url: "https://faithassembly.org" },
+      { cat: "Churches", title: "Griffin First Assembly", loc: "Griffin, GA", desc: "Historic Georgia AG congregation active in leadership and global missions.", url: "https://griffinfirst.org" },
+      { cat: "Churches", title: "James River Church", loc: "Springfield, MO", desc: "Flagship multi-site Ozarks church known for conferences, worship & relief.", url: "https://jamesriver.church" },
+      { cat: "Churches", title: "National Community Church", loc: "Washington, DC", desc: "Multi-site urban DC congregation pioneering campus & coffeehouse outreach.", url: "https://national.cc" },
+      { cat: "Churches", title: "Oaks Church", loc: "Red Oak (DFW), TX", desc: "Thriving North Texas multi-generational AG fellowship.", url: "https://oaks.church" },
+      { cat: "Churches", title: "Radiant Church", loc: "Kalamazoo, MI", desc: "Multi-campus Michigan AG church focused on church planting and college outreach.", url: "https://radiant.church" },
+      { cat: "Churches", title: "River Valley Church", loc: "Twin Cities, MN", desc: "Multi-site Minnesota congregation supporting global missions and Kingdom Builders.", url: "https://rivervalley.org" },
+      { cat: "Churches", title: "Timberline Church", loc: "Fort Collins, CO", desc: "Northern Colorado multi-site church noted for outreach and creative media.", url: "https://timberlinechurch.org" },
+      { cat: "Churches", title: "Trinity Church", loc: "Cedar Hill (DFW), TX", desc: "Dallas-Fort Worth regional church with strong Christian schools and missions.", url: "https://trinitychurch.org" },
+      { cat: "Churches", title: "Official AG Find-a-Church Directory", loc: "Nationwide (USA)", desc: "Locate Assemblies of God churches by ZIP code, city, or ministry language.", url: "https://ag.org/Resources/Directories/Find-a-Church" },
+
+      // Higher Ed
+      { cat: "Higher Education", title: "Assemblies of God Theological Seminary (AGTS)", loc: "Springfield, MO", desc: "Graduate seminary of Evangel University training Pentecostal scholars and pastors.", url: "https://www.evangel.edu/seminary/" },
+      { cat: "Higher Education", title: "Ascent College", loc: "Online / Virginia", desc: "Practical ministry, counseling, and organizational leadership degree programs.", url: "https://www.ascent.edu" },
+      { cat: "Higher Education", title: "Bridges Christian College", loc: "Metairie, LA", desc: "Accredited Christian higher education institution serving Gulf Coast leaders.", url: "https://www.bcc.edu" },
+      { cat: "Higher Education", title: "California Theological Seminary", loc: "California", desc: "Multilingual theological training across diverse AG communities.", url: "https://www.agcts.com" },
+      { cat: "Higher Education", title: "Caribbean Theological College", loc: "Bayamon, PR", desc: "Accredited Spanish/English theological education in the Caribbean.", url: "https://ctcad.org/" },
+      { cat: "Higher Education", title: "Center for Holy Lands Studies", loc: "Biblical Lands", desc: "On-site biblical geography, archaeology, and immersion study tours.", url: "https://thechls.org/" },
+      { cat: "Higher Education", title: "Christ Mission College", loc: "San Antonio, TX", desc: "Bilingual ministerial preparation and leadership college in South Texas.", url: "https://www.cmctx.edu/" },
+      { cat: "Higher Education", title: "Evangel University", loc: "Springfield, MO", desc: "Comprehensive AG university integrating arts, sciences, seminary & ministry.", url: "https://www.evangel.edu/" },
+      { cat: "Higher Education", title: "Global University", loc: "Worldwide Distance", desc: "Accredited global distance education & Berean School of the Bible.", url: "https://www.globaluniversity.edu/" },
+      { cat: "Higher Education", title: "LABI College", loc: "La Puente, CA", desc: "Premier Hispanic Assemblies of God Bible college on the West Coast.", url: "https://www.labi.edu/" },
+      { cat: "Higher Education", title: "Nelson American Indian College", loc: "Phoenix, AZ", desc: "Empowering Native American & Indigenous Christian leaders since 1957.", url: "https://www.aicag.edu/" },
+      { cat: "Higher Education", title: "Nelson University (formerly SAGU)", loc: "Waxahachie, TX", desc: "Comprehensive AG university South of Dallas (formerly Southwestern Assemblies of God University).", url: "https://www.nelson.edu/" },
+      { cat: "Higher Education", title: "North Central University", loc: "Minneapolis, MN", desc: "Urban downtown Minneapolis AG university with global missions emphasis.", url: "https://www.northcentral.edu/" },
+      { cat: "Higher Education", title: "Northpoint Bible College & Seminary", loc: "Haverhill, MA", desc: "New England Pentecostal Bible college and graduate seminary.", url: "https://www.northpoint.edu/" },
+      { cat: "Higher Education", title: "Northwest University", loc: "Kirkland, WA", desc: "Pacific Northwest AG university offering tech, nursing, business & ministry.", url: "https://www.northwestu.edu/" },
+      { cat: "Higher Education", title: "Southeastern University", loc: "Lakeland, FL", desc: "One of the fastest-growing private AG universities with nationwide extension sites.", url: "https://www.seu.edu" },
+      { cat: "Higher Education", title: "Trinity Bible College & Graduate School", loc: "Ellendale, ND", desc: "Upper Midwest Bible college and graduate school training rural & global leaders.", url: "https://trinitybiblecollege.edu/" },
+      { cat: "Higher Education", title: "University of Valley Forge", loc: "Phoenixville, PA", desc: "Mid-Atlantic Christian university near Philadelphia.", url: "https://www.valleyforge.edu/" },
+      { cat: "Higher Education", title: "Vanguard University", loc: "Costa Mesa, CA", desc: "Southern California comprehensive Christian university in Orange County.", url: "https://www.vanguard.edu/" },
+
+      // Missions & Ministries
+      { cat: "Missions & Ministries", title: "AG World Missions (AGWM)", loc: "Global", desc: "Sending missionaries and planting churches across more than 190 territories.", url: "https://agwm.org" },
+      { cat: "Missions & Ministries", title: "Convoy of Hope", loc: "Global Relief", desc: "Faith-based humanitarian relief, children's feeding, and disaster response.", url: "https://convoyofhope.org/" },
+      { cat: "Missions & Ministries", title: "Chi Alpha Campus Ministries", loc: "U.S. Universities", desc: "Transforming university students into lifelong disciples of Christ.", url: "https://chialpha.com/" },
+      { cat: "Missions & Ministries", title: "Royal Rangers USA", loc: "National Youth", desc: "Next-generation mentoring for boys & young men grounded in Scripture & outdoor adventure.", url: "https://royalrangers.com" },
+      { cat: "Missions & Ministries", title: "Adult & Teen Challenge USA", loc: "Nationwide", desc: "Christ-centered residential recovery programs for life-controlling addictions.", url: "https://teenchallengeusa.org/" },
+      { cat: "Missions & Ministries", title: "AG Chaplaincy Ministries", loc: "Military & Civil", desc: "Endorsing body for Armed Forces, VA healthcare, law enforcement, and prison chaplains.", url: "https://chaplaincy.ag.org/" },
+      { cat: "Missions & Ministries", title: "Network of Women Ministers (NWM)", loc: "National", desc: "Equipping, mentoring, and advocating for credentialed women in ministry.", url: "https://www.womenministers.ag.org/" },
+      { cat: "Missions & Ministries", title: "Speed the Light", loc: "Youth Missions", desc: "Student-led missions fundraising equipping global missionaries with vehicles & media.", url: "https://www.instagram.com/agspeedthelight/" },
+      { cat: "Missions & Ministries", title: "Project Rescue", loc: "Global", desc: "Rescuing and restoring survivors of sexual slavery and human trafficking.", url: "https://www.projectrescue.com/" },
+
+      // Scholarship & Bible Study
+      { cat: "Scholarship & Study", title: "Flower Pentecostal Heritage Center (IFPHC)", loc: "Springfield, MO", desc: "World's largest open archive of Pentecostal history, magazines, audio & photos.", url: "https://ifphc.org/" },
+      { cat: "Scholarship & Study", title: "Bible Engagement Project", loc: "Digital Curriculum", desc: "Free small-group and family Bible study curriculum from AG USA.", url: "https://bibleengagementproject.com/" },
+      { cat: "Scholarship & Study", title: "TrustBible", loc: "Open Web / CC-BY-4.0", desc: "Citation-backed Bible Q&A platform linking every answer to primary verses (KJV/CUV).", url: "https://trustbible.org/" },
+      { cat: "Scholarship & Study", title: "Encounter: Journal for Pentecostal Ministry", loc: "AGTS", desc: "Peer-reviewed scholarly journal focused on Pentecostal ministry practice.", url: "https://www.evangel.edu/seminary/student-resources/encounter-journal-for-pentecostal-ministry/" },
+      { cat: "Scholarship & Study", title: "International Journal of Pentecostal Missiology", loc: "AGTS", desc: "Academic journal exploring Pentecostal global missiology and cultural engagement.", url: "https://www.evangel.edu/seminary/student-resources/ijpm/" },
+      { cat: "Scholarship & Study", title: "Journal of Sustainable Ministry", loc: "Southeastern Univ.", desc: "Research journal promoting healthy long-term pastoral and organizational leadership.", url: "https://seu.edu/academics/bcmt/journal-of-sustainable-ministry-article-submission/" },
+
+      // Doctrine & Governance
+      { cat: "Doctrine & Governance", title: "16 Fundamental Truths", loc: "Official AG USA", desc: "Official Statement of Fundamental Truths of the Assemblies of God.", url: "https://ag.org/Beliefs/Statement-of-Fundamental-Truths" },
+      { cat: "Doctrine & Governance", title: "Premillennial Eschatology (2024)", loc: "Position Paper", desc: "Official AG General Presbytery theological paper adopted August 2024.", url: "https://ag.org/Beliefs/Position-Papers/Premillennial-Eschatology" },
+      { cat: "Doctrine & Governance", title: "Revival & Spiritual Renewal (2024)", loc: "Position Paper", desc: "Recent AG theological perspective on awakening and spiritual renewal.", url: "https://ag.org/Beliefs/Position-Papers/Revival-and-Spiritual-Renewal" },
+      { cat: "Doctrine & Governance", title: "AG Constitution & Bylaws", loc: "Governance", desc: "Constitutional governance documents of the General Council.", url: "https://ag.org/About/About-the-AG/Constitution-and-Bylaws" },
+      { cat: "Doctrine & Governance", title: "Ministerial Portfolio Template", loc: "Google Docs", desc: "Ready-to-use portfolio template for ministerial credentials & annual reviews.", url: "https://docs.google.com/document/d/1-2EYcx2ZdXmQnqvznVjLLIfT5d4Vb4O8hq7nVEsuOvw/edit?usp=sharing" },
+
+      // Media & Podcasts
+      { cat: "Media & Podcasts", title: "AG News & Podcast", loc: "Official News", desc: "Daily news, feature stories, and podcast interviews across the fellowship.", url: "https://news.ag.org/" },
+      { cat: "Media & Podcasts", title: "Influence Magazine & Podcast", loc: "Leadership Media", desc: "Bimonthly leadership magazine and podcast for church leaders.", url: "https://influencemagazine.com/" },
+      { cat: "Media & Podcasts", title: "Ranger Podcast", loc: "Royal Rangers", desc: "Training discussions and stories for boys ministry mentors and leaders.", url: "https://royalrangers.com/podcast" },
+      { cat: "Media & Podcasts", title: "Your Day Podcast", loc: "Devotional", desc: "Short daily biblical encouragement podcast produced by AG USA.", url: "https://ag.org/Podcast/Your-Day-Podcast" }
+    ];
+
+    const TRUTHS = [
+      ["1. The Scriptures Inspired", "2 Tim 3:15–17; 2 Pet 1:21 — Verbally inspired Word of God and infallible rule of faith."],
+      ["2. The One True God", "Deut 6:4; Matt 28:19 — Eternally self-existent in three Persons: Father, Son, and Holy Spirit."],
+      ["3. Deity of the Lord Jesus Christ", "Matt 1:23; Heb 1:3 — Eternal Son of God, virgin birth, sinless life, atonement, and exaltation."],
+      ["4. The Fall of Man", "Gen 1:26–31; Rom 5:12–21 — Voluntary transgression bringing physical and spiritual death."],
+      ["5. The Salvation of Man", "Luke 24:47; Eph 2:8 — Redemption exclusively through repentance and faith in Christ's shed blood."],
+      ["6. The Ordinances of the Church", "Matt 28:19; 1 Cor 11:26 — Baptism in water by immersion and Holy Communion."],
+      ["7. Baptism in the Holy Spirit", "Luke 24:49; Acts 1:8 — Enduement of power for life and service subsequent to new birth."],
+      ["8. Initial Physical Evidence", "Acts 2:4; 1 Cor 12:4–10 — Witnessed by the initial physical sign of speaking with other tongues."],
+      ["9. Sanctification", "Rom 12:1–2; 1 Thess 5:23 — Ongoing separation from evil and dedication to God."],
+      ["10. The Church & Its Mission", "Eph 1:22–23; Matt 28:19 — Body of Christ called to evangelize, worship, disciple & serve."],
+      ["11. The Ministry", "Mark 16:15–20; Eph 4:11–13 — Divinely called and scripturally ordained ministry for building the Church."],
+      ["12. Divine Healing", "Isa 53:4–5; Jas 5:14–16 — Deliverance from sickness is provided for in the atonement."],
+      ["13. The Blessed Hope", "1 Thess 4:16–17; Titus 2:13 — Resurrection of saints and catching away of believers."],
+      ["14. Millennial Reign of Christ", "Rev 19:11–14; 20:1–6 — Return of Christ with His saints to reign on earth for 1,000 years."],
+      ["15. The Final Judgment", "Matt 25:46; Rev 20:11–15 — Final judgment and eternal separation of the unrepentant."],
+      ["16. New Heavens & New Earth", "2 Pet 3:13; Rev 21–22 — Promised eternal new creation wherein righteousness dwells."]
+    ];
+
+    const state = { cat: "All", q: "" };
+    const categories = ["All", ...new Set(RESOURCES.map(r => r.cat))];
+    const tabsEl = document.getElementById("categoryTabs");
+    const cardsEl = document.getElementById("cardsContainer");
+    const countEl = document.getElementById("resultCount");
+    const searchEl = document.getElementById("searchBox");
+    const heroImg = document.getElementById("heroImg");
+
+    function renderTabs() {
+      tabsEl.innerHTML = "";
+      categories.forEach(c => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "tab" + (state.cat === c ? " active" : "");
+        b.textContent = c;
+        b.onclick = () => { state.cat = c; renderTabs(); renderCards(); };
+        tabsEl.appendChild(b);
+      });
+    }
+
+    function renderCards() {
+      const q = state.q.trim().toLowerCase();
+      const filtered = RESOURCES.filter(item => {
+        const catOk = state.cat === "All" || item.cat === state.cat;
+        const text = (item.title + " " + item.loc + " " + item.desc + " " + item.cat).toLowerCase();
+        return catOk && (!q || text.includes(q));
+      });
+      countEl.textContent = filtered.length + " of " + RESOURCES.length + " featured entries";
+      cardsEl.innerHTML = filtered.map(item => `
+        <article class="card">
+          <div>
+            <span class="card-cat">${item.cat}</span>
+            <h4>${item.title}</h4>
+            <p>${item.desc}</p>
+          </div>
+          <div class="card-footer">
+            <span class="loc">${item.loc}</span>
+            <a href="${item.url}" target="_blank" rel="noopener">Visit →</a>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    document.getElementById("truthsContainer").innerHTML = TRUTHS.map(([t, d]) => `
+      <details class="truth">
+        <summary>${t}</summary>
+        <p>${d}</p>
+      </details>
+    `).join("");
+
+    searchEl.addEventListener("input", e => { state.q = e.target.value; renderCards(); });
+
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      const root = document.documentElement;
+      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      heroImg.src = next === "dark" ? "./assets/hero-dark.svg" : "./assets/hero-light.svg";
+    });
+
+    renderTabs();
+    renderCards();
+  </script>
+</body>
+</html>
